@@ -21,3 +21,19 @@ body {
 
   box-sizing: border-box;
 }
+
+$layout-breakpoint-small: 720px;
+
+@media (max-width: $layout-breakpoint-small) {
+  body {
+    padding: 0;
+  }
+  html {
+    //This defines what 1 rem is
+    font-size: 62.5%;
+  }
+  .section-features {
+    z-index: -1;
+    margin-top: 10rem;
+  }
+}

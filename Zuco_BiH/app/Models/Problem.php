@@ -13,8 +13,11 @@ class Problem extends Model
         'category_id',
         'sub_category_id',
         'description',
+        'city_id',
+        'street',
         'file',
         'report_type_id',
+        'admin_check'
     ];
     public function category(){
         return $this->belongsTo(Category::class);
@@ -25,4 +28,8 @@ class Problem extends Model
     public function report_type(){
         return $this->belongsTo(Report_type::class);
     }
+    public function city(){
+        return $this->belongsTo(City::class);
+    }
+    
 }
